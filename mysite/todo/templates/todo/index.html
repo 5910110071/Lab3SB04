@@ -1,14 +1,16 @@
 {% extends 'todo/base.html' %}
 
 {% block content %}
-    <h1>You're Welcome</h1>
-
+    <div style="margin-top:50px;">
+            <h1>ระบบเช็คชื่อออนไลน์</h1>
+    </div>
+    
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     <form action="{% url 'todo:create' %}" method="post">
         {% csrf_token %}
         <!-- Todo Name -->
         <div class="form-group">
-            <label for="todo" class="col-sm-3 control-label">5910110071 นายชานน พรศิริวงศ์</label>
+            <label for="todo" class="col-sm-3 control-label">ชื่อ-นามสกุล/รหัสนักศึกษา</label>
             <div class="col-sm-6">
                 {{ form.body }}
             </div>
@@ -18,7 +20,7 @@
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
                 <button type="submit" class="btn btn-default">
-                    <i class="fa fa-plus"></i> Add Todo
+                    <i class="fa fa-plus"></i> ลงชื่อ
                 </button>
             </div>
         </div>
@@ -26,11 +28,11 @@
     </form>
     
 
-    <!-- Current Todos -->
-    <h2>Current Todos</h2>
+   
+    
     <table class="table table-striped todo-table">
         <thead>
-            <th>Todos</th><th>&nbsp;</th>
+            <th>รายชื่อนักศึกษา</th><th>&nbsp;</th>
         </thead>
 
         <tbody>
