@@ -2,7 +2,7 @@
 
 {% block content %}
     <div style="margin-top:50px;">
-            <h1>ระบบเช็คชื่อออนไลน์</h1>
+            <div style="margin-top:50px"><h1 style="text-align: center; color:cornflowerblue;">ระบบเช็คชื่อออนไลน์</h1></div>
     </div>
     
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
@@ -20,7 +20,7 @@
         <div class="form-group">
             <div class="col-sm-offset-3 col-sm-6">
                 <button type="submit" class="btn btn-default">
-                    <i class="fa fa-plus"></i> ลงชื่อ
+                    <i class="fa fa-plus"></i>Commit
                 </button>
             </div>
         </div>
@@ -45,7 +45,7 @@
                     <td>
                         <form action="{% url 'todo:delete' post.id %}" method="post">
                             {% csrf_token %}
-                            <button>ลบ</button>
+                            <button>delete</button>
                         </form>
                     </td>
                 </tr>
